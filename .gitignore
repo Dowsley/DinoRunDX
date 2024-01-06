@@ -5,3 +5,4 @@ bin
 log.txt
 asconfig.json
 obj
+.vscode
