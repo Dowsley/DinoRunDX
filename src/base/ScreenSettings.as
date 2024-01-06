@@ -13,13 +13,13 @@ package base
 		private var _quality:String = "LOW";
 		private var _brain:Brain;
 		
-		public function ScreenSettings(stage:Stage,brain:Brain)
+		public function ScreenSettings(stage:Stage, brain:Brain)
 		{
 			_stage = stage;
 			_brain = brain;
 		}
 		
-		public function toggleMinMax ():void
+		public function toggleMinMax():void
 		{
 			_maxed = !_maxed;
 			if (_maxed)
@@ -28,7 +28,7 @@ package base
 				minimize();
 		}
 		
-		public function minimize ():void
+		public function minimize():void
 		{
 			//mdm.Forms.thisForm.width = Brain.DIMENSIONS.x;
 			//mdm.Forms.thisForm.height = Brain.DIMENSIONS.y;
@@ -38,12 +38,12 @@ package base
 			//mdm.Forms.thisForm.hideCaption(false);
 		}
 		
-		public function maximize ():void
+		public function maximize():void
 		{
 			//mdm.Forms.thisForm.width = Brain.MONITOR_W;
 			//mdm.Forms.thisForm.height = Brain.MONITOR_H;
-			Brain.left = 0 - (Brain.MONITOR_W - Brain.DIMENSIONS.x)/2;
-			Brain.top = 0 - (Brain.MONITOR_H - Brain.DIMENSIONS.y)/2;
+			Brain.left = 0 - (Brain.MONITOR_W - Brain.DIMENSIONS.x) / 2;
+			Brain.top = 0 - (Brain.MONITOR_H - Brain.DIMENSIONS.y) / 2;
 			//mdm.Forms.thisForm.hideCaption(true);
 			//if (!Brain.LINUX)
 			//mdm.Application.maximize();
@@ -53,13 +53,14 @@ package base
 		{
 			_fullScreen = !_fullScreen;
 			//mdm.Forms.getFormByName("MainForm").showFullScreen(_fullScreen);
-			if (Brain.PC) {
+			if (Brain.PC)
+			{
 				//mdm.Forms.getFormByName("MainForm").hideCaption(_fullScreen);
 				/*if (_fullScreen) {
-					_brain.removeMenu();
-				} else {
-					_brain.buildMenu(null);
-				}*/
+				   _brain.removeMenu();
+				   } else {
+				   _brain.buildMenu(null);
+				   }*/
 			}
 			toggleMinMax();
 		}
@@ -67,17 +68,28 @@ package base
 		public function set quality(value:String):void
 		{
 			_quality = value;
-			switch (value) {
-				case "BEST": _stage.quality = StageQuality.BEST; break;
-				case "HIGH": _stage.quality = StageQuality.HIGH; break;
-				case "MEDIUM": _stage.quality = StageQuality.MEDIUM; break;
-				case "LOW": _stage.quality = StageQuality.LOW; break;
+			switch (value)
+			{
+			case "BEST": 
+				_stage.quality = StageQuality.BEST;
+				break;
+			case "HIGH": 
+				_stage.quality = StageQuality.HIGH;
+				break;
+			case "MEDIUM": 
+				_stage.quality = StageQuality.MEDIUM;
+				break;
+			case "LOW": 
+				_stage.quality = StageQuality.LOW;
+				break;
 			}
 		}
 		
-		public function get quality():String {return _quality;}
-		public function get fullScreen():Boolean {return _fullScreen;}
-		public function get maxed():Boolean {return _maxed;}
+		public function get quality():String  { return _quality; }
 		
+		public function get fullScreen():Boolean  { return _fullScreen; }
+		
+		public function get maxed():Boolean  { return _maxed; }
+	
 	}
 }
