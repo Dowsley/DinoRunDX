@@ -10,7 +10,7 @@ Tell us about it though and we might just help spread the word :)
 
 ## Setup & Compilation
 
-*The following guide, written by discord user "Minxrod", is necessary before compiling. Many thanks to him as all my work is based off this.*
+**The following guide is a slightly modified version of the one written by discord user "Minxrod". All credit goes to their amazing work of figuring out how to easily compile all this old code. All I've done was merely follow the steps to make this work as much out of the box as possible.**
 
 This is a text tutorial on how to set up a Dino Run DX project within FlashDevelop and get it to compile correctly.
 Note that this does not build with the Steam support, as far as I can tell.
@@ -56,20 +56,6 @@ Edit the files air.xml, airmobile.xml, and flashplayer.xml to add the line
 Launch FlashDevelop.exe. If the main page breaks, just click "No" and disable it by going to Tools > Settings > StartPage and check "Disable". Then close and reopen FlashDevelop.
 
 Check that Tools > Settings > AS3Context contains the AIR SDK version 29 under "Installed Flex SDKs". If it doesn't manually add the entry following the instructions under step 8 here: https://www.flashdevelop.org/community/viewtopic.php?t=13078
-
-=== Source code and Libraries ===
-
-Now, download the Dino Run DX source code from https://github.com/pixeljam/DinoRunDX. You can do this via git with:
-```
-git clone https://github.com/pixeljam/DinoRunDX
-```
-Alternatively, if you don't have git installed and don't want to install it, just download the zip file from the URL and extract it somewhere.
-
-Then, go to https://sourceforge.net/projects/box2dflash/ to download Box2D. (direct https://sourceforge.net/projects/box2dflash/files/latest/download)
-
-Extract the folder, and copy the folder Box2D/ from the extracted Source/ to DinoRunDX's src/ folder.
-
-Now, go to https://gamua.com/starling/download/ and download Starling 2.7. Extract the zip somewhere, and take the starling.swc located in starling/bin/ and put it in the project somewhere (I chose assets/swcs/ to put it with the rest of the swcs). Within FlashDevelop, locate this swc and right-click and select "Add to Library".
 
 === Project Setup ===
 
