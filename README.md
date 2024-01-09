@@ -8,6 +8,9 @@ If you can go through the trouble of swapping all the art assets and make someth
 Tell us about it though and we might just help spread the word :)
 > Any questions about the code?  Email Miles at pixeljamgames@gmail.com.
 
+## 
+I managed to extract most assets from the .fla files, they are under `assets/exported`. The only assets lacking are some spritesheets from the Interface folders. To extract, you need Adobe Animate to open the .fla files. The automation scripts I used are under `scripts/`.
+
 ## Setup & Compilation
 
 **The following guide is a slightly modified version of the one written by discord user "Minxrod". All credit goes to their amazing work of figuring out how to easily compile all this old code. All I've done was merely follow the steps to make this work as much out of the box as possible.**
